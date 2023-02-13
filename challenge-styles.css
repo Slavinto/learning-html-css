@@ -19,6 +19,21 @@ body {
   border: 5px solid #333;
 }
 
+.sale-sticker {
+  position: absolute;
+
+  top: -20px;
+  left: -45px;
+  width: 90px;
+  height: 30px;
+  background-color: red;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  letter-spacing: 5px;
+}
+
 h1,
 h3,
 h5,
@@ -42,7 +57,7 @@ h1 {
 
 h3 {
   font-weight: bolder;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -103,4 +118,33 @@ p {
   font-size: 30px;
   font-weight: bolder;
   margin-bottom: 2px;
+}
+
+.available-colors {
+  margin-top: 25px;
+}
+.color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: aqua;
+  margin-right: 10px;
+}
+.color:nth-child(1) {
+  background-color: black;
+}
+.color:nth-child(2) {
+  background-color: blue;
+}
+.color:nth-child(3) {
+  background-color: red;
+}
+.color:nth-child(4) {
+  background-color: yellow;
+}
+.color:nth-child(5) {
+  background-color: green;
+}
+.color:nth-child(6) {
+  background-color: rgb(124, 67, 67);
 }
