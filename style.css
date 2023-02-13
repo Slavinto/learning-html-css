@@ -7,6 +7,7 @@
 
 body {
   border-top: 5px solid #1098ad;
+  position: relative;
 }
 
 .main-container {
@@ -19,7 +20,7 @@ body {
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 50px;
-  height: 80px;
+  /* height: 80px; */
 }
 
 aside {
@@ -35,6 +36,7 @@ article {
 }
 .article-header {
   margin-bottom: 40px;
+  position: relative;
 }
 
 h1,
@@ -49,9 +51,31 @@ h1 {
   font-style: italic;
 }
 
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: 20px;
+  right: -20px;
+}
+
+h2::first-letter {
+  font-size: 60px;
 }
 
 h3 {
@@ -94,6 +118,10 @@ p {
   font-size: 22px;
   line-height: 1.5;
   margin-bottom: 15px;
+}
+
+h3 + p::first-line {
+  /* color: red; */
 }
 
 footer p {
@@ -156,9 +184,29 @@ footer p {
 /* Inheritance */
 nav {
   font-size: 18px;
+  text-align: center;
+}
+
+nav a:link {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+nav a:link:last-child {
+  margin-right: 0;
 }
 
 .article-image {
   width: 100%;
   height: auto;
+}
+
+.like-btn {
+  width: 100px;
+  height: 50px;
+  font-size: 22px;
+  position: absolute;
+  right: 100px;
+  bottom: 5%;
+  cursor: pointer;
 }
