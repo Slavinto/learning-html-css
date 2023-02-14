@@ -4,6 +4,7 @@
   font-weight: bold;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,13 +13,27 @@ body {
 .container {
   position: relative;
   width: 825px;
-  height: auto;
+  height: 349px;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
   border: 5px solid #333;
 }
 
+.product-image-container {
+  float: left;
+  height: 240px;
+}
+.product-description-container {
+  float: left;
+  width: 240px;
+  margin: 0 30px;
+}
+.product-details-container {
+  float: right;
+  width: 240px;
+  margin-right: 20px;
+}
 .sale-sticker {
   position: absolute;
 
@@ -34,6 +49,16 @@ body {
   letter-spacing: 5px;
 }
 
+.product-image {
+  width: 240px;
+}
+
+.shipping {
+  display: inline-block;
+  color: #aaa;
+  margin-left: 20px;
+}
+
 h1,
 h3,
 h5,
@@ -44,6 +69,7 @@ h5,
 header {
   padding: 15px 10px;
   background-color: #eee;
+  /* clear: both; */
 }
 
 footer {
@@ -59,11 +85,6 @@ h3 {
   font-weight: bolder;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-h5 {
-  color: #aaa;
-  margin-bottom: 25px;
 }
 
 li::marker {
@@ -82,7 +103,7 @@ ul {
 nav {
   position: absolute;
   top: 20px;
-  left: 10px;
+  right: 10px;
 }
 
 p {
@@ -99,6 +120,7 @@ p {
   height: 100%;
   border: none;
   border-top: 5px solid #333;
+  clear: both;
 }
 
 .add-to-cart:hover {
@@ -116,8 +138,10 @@ p {
 
 .price {
   font-size: 30px;
+  display: inline-block;
+  width: auto;
   font-weight: bolder;
-  margin-bottom: 2px;
+  margin: 10px 0 20px 0;
 }
 
 .available-colors {
