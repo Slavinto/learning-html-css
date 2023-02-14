@@ -37,7 +37,6 @@
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 30px;
-        margin: 40px;
 
         /* FLEXBOX */
         display: flex;
@@ -51,8 +50,17 @@
         align-self: flex-start;
       }
 
-      .el--4 {
-        /* align-self: stretch; */
+      .el {
+        /* flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        /* allows flexbox items to grow to fit the container */
+        flex-grow: 0;
+        /* allows to shrink flexbox items to fit container */
+        flex-shrink: 0;
+        /* minimum width property in flexbox */
+        flex-basis: 60px;
       }
       .el--5 {
         align-self: stretch;
