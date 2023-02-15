@@ -11,26 +11,31 @@ body {
 }
 
 .container {
+  display: flex;
+  flex: 0 1 349px;
+  flex-direction: column;
   position: relative;
   width: 825px;
-  height: 349px;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
   border: 5px solid #333;
 }
 
+.all-product-information {
+  display: flex;
+  justify-content: space-between;
+}
+
 .product-image-container {
-  float: left;
-  height: 240px;
+  display: flex;
 }
 .product-description-container {
-  float: left;
-  width: 240px;
-  margin: 0 30px;
+  display: flex;
+  flex: 0 1 240px;
+  flex-direction: column;
 }
 .product-details-container {
-  float: right;
   width: 240px;
   margin-right: 20px;
 }
@@ -53,10 +58,14 @@ body {
   width: 240px;
 }
 
+.price-shipping-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .shipping {
-  display: inline-block;
   color: #aaa;
-  margin-left: 20px;
 }
 
 h1,
@@ -138,21 +147,18 @@ p {
 
 .price {
   font-size: 30px;
-  display: inline-block;
-  width: auto;
   font-weight: bolder;
-  margin: 10px 0 20px 0;
+  margin-top: 10px;
 }
 
 .available-colors {
-  margin-top: 25px;
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
 }
 .color {
-  display: inline-block;
   width: 15px;
   height: 15px;
-  background-color: aqua;
-  margin-right: 10px;
 }
 .color:nth-child(1) {
   background-color: black;
