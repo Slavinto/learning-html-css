@@ -13,6 +13,7 @@
         background-color: orangered;
       }
       .el--3 {
+        height: 150px;
         background-color: green;
       }
       .el--4 {
@@ -23,7 +24,6 @@
       }
       .el--6 {
         background-color: steelblue;
-        /* height: 150px; */
       }
       .el--7 {
         background-color: yellow;
@@ -50,24 +50,34 @@
         row-gap: 40px;
         /* gap: 40px; */
         height: 600px;
+        display: none;
       }
 
       .container--2 {
         /* display: none; */
         /* STARTER */
-        display: none;
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
         margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
-      }
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        justify-content: center;
+        align-content: center;
+        gap: 50px;
 
+        justify-items: center;
+        align-items: center;
+      }
       .el--3 {
-        grid-column: 2/3;
-        grid-row: 1/-1;
+        align-self: end;
+        justify-self: end;
+        /* grid-column: 2/3;
+        grid-row: 1/-1; */
         /* grid-row: 2/3;
         grid-column: 2/3; */
         /* align-self: center;
@@ -75,8 +85,8 @@
       }
 
       .el--5 {
-        grid-row: 1/-1;
-        grid-column: 4/5;
+        /* grid-row: 1/-1;
+        grid-column: 4/5; */
       }
 
       .el--2 {
@@ -84,7 +94,7 @@
         /* grid-column: 1 / span 3; */
         /* spans from 1st cell to the end of the row */
         /* grid-column: 1 / -1; */
-        grid-row: 2/3;
+        /* grid-row: 2/3; */
       }
 
       .el--6 {
