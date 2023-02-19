@@ -37,33 +37,61 @@ GREY COLOR: #343a40
 
       .accordion {
         width: 700px;
-        margin: 100px auto;
-        box-shadow: 0 20px 30px 0 rgba(52, 58, 64, 0.07);
+        margin: 32px auto;
+        box-shadow: 0 0 32px 0 rgba(52, 58, 64, 0.07);
       }
 
-      .icon object {
-        margin-left: 100px;
+      .item-icon {
         width: 32px;
         height: 32px;
       }
-      .accordion-item {
-        display: flex;
-        flex-direction: column;
-      }
-      .accordion-item .header {
+      .accordion-item.active {
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
         border-top: 5px #087f5b solid;
-        color: #087f5b;
-        display: flex;
-        flex: 1 0 80px;
-        justify-content: flex-start;
+        column-gap: 24px;
+        row-gap: 32px;
         align-items: center;
       }
-      .header h2 {
-        margin-left: 10px;
+
+      .accordion-item {
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
       }
+
+      .accordion-item.active > .item-index,
+      .item-icon,
+      .item-name {
+        color: #087f5b;
+        /* margin: 24px; */
+      }
+
+      .item-name {
+        /* margin-left: 0; */
+      }
+
+      .item-icon > .ionicon {
+        stroke: #087f5b;
+        /* align-self: center; */
+      }
+
+      .item-index {
+      }
+
       .contents {
-        /* padding: 16px 48px; */
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin-bottom: 32px;
       }
+
+      .item-name {
+      }
+
       .contents p {
         line-height: 1.6;
         margin-bottom: 24px;
@@ -81,15 +109,27 @@ GREY COLOR: #343a40
   <body>
     <div class="accordion">
       <div class="accordion-item active">
-        <div class="header">
-          <div class="index"><h2>02</h2></div>
-          <div class="name">
-            <h2>How long do I have to return my chair?</h2>
-          </div>
+        <div class="item-index"><h2>02</h2></div>
+        <div class="item-name">
+          <h2>How long do I have to return my chair?</h2>
+        </div>
 
-          <div class="icon">
-            <object data="./icons/chevron-down-outline.svg"></object>
-          </div>
+        <div class="item-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Chevron Down</title>
+            <path
+              fill="none"
+              stroke="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="48"
+              d="M112 184l144 144 144-144"
+            />
+          </svg>
         </div>
         <div class="contents">
           <p>
@@ -104,6 +144,18 @@ GREY COLOR: #343a40
             <li>Sapiente ipsum hic voluptate eligendi modi, illo corrupti.</li>
             <li>Quam, assumenda quos.</li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="item-index"><h2>02</h2></div>
+        <div class="item-name">
+          <h2>How long do I have to return my chair?</h2>
+        </div>
+
+        <div class="item-icon">
+          <object data="./icons/chevron-down-outline.svg"></object>
         </div>
       </div>
     </div>
