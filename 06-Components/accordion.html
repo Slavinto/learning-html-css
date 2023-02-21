@@ -35,27 +35,47 @@ GREY COLOR: #343a40
         line-height: 1;
       }
 
+      nav {
+        display: flex;
+        flex: 1 0 80px;
+        height: 50px;
+        margin: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+
       .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
         width: 700px;
         margin: 32px auto;
-        box-shadow: 0 0 32px 0 rgba(52, 58, 64, 0.07);
       }
 
       .item-icon {
         width: 32px;
         height: 32px;
       }
+
       .accordion-item.active {
         padding: 24px;
         display: grid;
         grid-template-columns: auto 1fr auto;
         border-top: 5px #087f5b solid;
         column-gap: 24px;
-        row-gap: 32px;
+        row-gap: 18px;
         align-items: center;
       }
 
+      .accordion-item .contents {
+        display: none;
+      }
+      .accordion-item.active .contents {
+        display: block;
+      }
+
       .accordion-item {
+        box-shadow: 0 0 32px 0 rgba(52, 58, 64, 0.07);
         padding: 24px;
         display: grid;
         grid-template-columns: auto 1fr auto;
@@ -64,32 +84,30 @@ GREY COLOR: #343a40
         align-items: center;
       }
 
-      .accordion-item.active > .item-index,
-      .item-icon,
-      .item-name {
+      .accordion-item.active .item-index,
+      .accordion-item.active .item-name {
         color: #087f5b;
-        /* margin: 24px; */
       }
 
-      .item-name {
-        /* margin-left: 0; */
+      .accordion-item .item-index {
+        color: #868e96;
       }
 
-      .item-icon > .ionicon {
+      .accordion-item .item-name {
+        color: #343a40;
+      }
+
+      .accordion-item.active .ionicon path {
         stroke: #087f5b;
-        /* align-self: center; */
       }
 
-      .item-index {
+      .accordion-item .ionicon path {
+        stroke: #343a40;
       }
 
       .contents {
         grid-row: 2/3;
         grid-column: 2/3;
-        margin-bottom: 32px;
-      }
-
-      .item-name {
       }
 
       .contents p {
@@ -97,6 +115,7 @@ GREY COLOR: #343a40
         margin-bottom: 24px;
         font-weight: 550;
       }
+
       .contents ul {
         color: #868e96;
         margin-left: 24px;
@@ -107,7 +126,48 @@ GREY COLOR: #343a40
     </style>
   </head>
   <body>
+    <nav>
+      <a href="./components-home.html">Home</a>
+    </nav>
     <div class="accordion">
+      <div class="accordion-item">
+        <div class="item-index"><h2>01</h2></div>
+        <div class="item-name">
+          <h2>Where are these chairs assembled?</h2>
+        </div>
+
+        <div class="item-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Chevron Down</title>
+            <path
+              fill="none"
+              stroke="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="48"
+              d="M112 184l144 144 144-144"
+            />
+          </svg>
+        </div>
+        <div class="contents">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
+            assumenda quos. Eaque, sequi? Sapiente ipsum hic voluptate eligendi
+            modi, illo corrupti. Suscipit quod odit non architecto nostrum
+            debitis est laborum?
+          </p>
+          <ul>
+            <li>Assumenda ipsum eos aperiam qui temporibus corrupti autem.</li>
+            <li>Sapiente minus fuga, temporibus odio</li>
+            <li>Sapiente ipsum hic voluptate eligendi modi, illo corrupti.</li>
+            <li>Quam, assumenda quos.</li>
+          </ul>
+        </div>
+      </div>
       <div class="accordion-item active">
         <div class="item-index"><h2>02</h2></div>
         <div class="item-name">
@@ -146,16 +206,42 @@ GREY COLOR: #343a40
           </ul>
         </div>
       </div>
-    </div>
-    <div class="accordion">
       <div class="accordion-item">
-        <div class="item-index"><h2>02</h2></div>
+        <div class="item-index"><h2>03</h2></div>
         <div class="item-name">
-          <h2>How long do I have to return my chair?</h2>
+          <h2>Do you ship to countries outside the EU?</h2>
         </div>
 
         <div class="item-icon">
-          <object data="./icons/chevron-down-outline.svg"></object>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Chevron Down</title>
+            <path
+              fill="none"
+              stroke="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="48"
+              d="M112 184l144 144 144-144"
+            />
+          </svg>
+        </div>
+        <div class="contents">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
+            assumenda quos. Eaque, sequi? Sapiente ipsum hic voluptate eligendi
+            modi, illo corrupti. Suscipit quod odit non architecto nostrum
+            debitis est laborum?
+          </p>
+          <ul>
+            <li>Assumenda ipsum eos aperiam qui temporibus corrupti autem.</li>
+            <li>Sapiente minus fuga, temporibus odio</li>
+            <li>Sapiente ipsum hic voluptate eligendi modi, illo corrupti.</li>
+            <li>Quam, assumenda quos.</li>
+          </ul>
         </div>
       </div>
     </div>
