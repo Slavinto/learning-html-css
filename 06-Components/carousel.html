@@ -43,7 +43,7 @@ GREY COLOR: #343a40
       .carousel {
         position: relative;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         justify-content: space-between;
         width: 800px;
         height: 256px;
@@ -57,23 +57,28 @@ GREY COLOR: #343a40
       .carousel-arrow-left,
       .carousel-arrow-right {
         position: absolute;
+        top: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 48px;
         height: 48px;
+        border: none;
         border-radius: 50%;
         background-color: #fff;
-        box-shadow: 2px 2px 18px 8px rgb(52, 58, 64, 0.07);
+        box-shadow: 2px 2px 18px 8px rgb(52, 58, 64, 0.2);
+        cursor: pointer;
       }
 
       .carousel-arrow-left {
         padding-right: 4px;
-        left: -24px;
+        left: 0;
+        transform: translate(-50%, -50%);
       }
 
       .carousel-arrow-right {
-        right: -24px;
+        right: 0;
+        transform: translate(50%, -50%);
       }
 
       .icon-arrow-left,
@@ -103,6 +108,7 @@ GREY COLOR: #343a40
 
       .text-main {
         color: #e6fcf5;
+        padding: 8px 24px 12px 8px;
       }
 
       .text-footer {
@@ -114,6 +120,28 @@ GREY COLOR: #343a40
         font-weight: 500;
         line-height: 1.5;
       }
+
+      .dots {
+        position: absolute;
+        display: flex;
+        gap: 8px;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 200%);
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot.active {
+        background-color: #087f5b;
+      }
     </style>
   </head>
   <body>
@@ -121,7 +149,7 @@ GREY COLOR: #343a40
       <a href="./components-home.html">Home</a>
     </nav>
     <div class="carousel">
-      <div class="carousel-arrow-left">
+      <button class="carousel-arrow-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -136,7 +164,7 @@ GREY COLOR: #343a40
             d="M15.75 19.5L8.25 12l7.5-7.5"
           />
         </svg>
-      </div>
+      </button>
       <div class="contents-foto">
         <img src="./images/maria.jpg" alt="author" />
       </div>
@@ -145,8 +173,7 @@ GREY COLOR: #343a40
           <p>
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
             perspiciatis quasi ad labore. Architecto suscipit repellat obcaecati
-            laborum placeat sint consequuntur maxime sunt quidem, unde eveniet
-            sit omnis ipsa assumenda!"
+            laborum maxime sunt quidem, sit omnis"
           </p>
         </div>
         <div class="text-footer">
@@ -154,7 +181,7 @@ GREY COLOR: #343a40
           <p class="author-job">Senior Product Manager at EDP Comercial</p>
         </div>
       </blockquote>
-      <div class="carousel-arrow-right">
+      <button class="carousel-arrow-right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -169,6 +196,12 @@ GREY COLOR: #343a40
             d="M8.25 4.5l7.5 7.5-7.5 7.5"
           />
         </svg>
+      </button>
+      <div class="dots">
+        <button class="dot active">&nbsp</button>
+        <button class="dot">&nbsp</button>
+        <button class="dot">&nbsp</button>
+        <button class="dot">&nbsp</button>
       </div>
     </div>
   </body>
