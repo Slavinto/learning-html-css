@@ -4,24 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordion Component</title>
+    <title>Components Project Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
       /*
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-*/
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
 
-      /* 
-MAIN COLOR: #087f5b
-GREY COLOR: #343a40
-*/
+      /*
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
 
       * {
         margin: 0;
@@ -30,27 +32,165 @@ GREY COLOR: #343a40
       }
 
       body {
-        font-family: "Inter", sans-serif;
+        font-family: "Rubik", sans-serif;
         color: #343a40;
         line-height: 1;
       }
+
+      .centered {
+        margin: 0 auto;
+      }
+
+      header {
+        position: relative;
+        color: #f2f5f1;
+        /* background-color: orangered; */
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(
+            rgb(52, 58, 64, 0.6),
+            rgb(52, 58, 64, 0.6)
+          ),
+          url("./images/hero.jpg");
+        background-size: cover;
+      }
+
+      .logo {
+        font-size: 32px;
+        cursor: pointer;
+      }
+
       nav {
         display: flex;
         gap: 32px;
-        flex: 1 0 80px;
-        height: 50px;
-        margin: 50px;
         justify-content: center;
         align-items: center;
+      }
+
+      nav a:link {
+        color: #f2f5f1;
+        text-decoration: none;
+      }
+
+      nav a:visited {
+        color: #f2f5f1;
+      }
+
+      nav a:focus {
+        color: #f2f5f1;
+      }
+
+      nav a:hover {
+      }
+
+      nav a:active {
+      }
+
+      .nav-container {
+        width: 1200px;
+        /* background-color: green; */
+        font-weight: 700;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hero-section-main {
+        /* background-color: violet; */
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 1200px;
+      }
+
+      .text-container {
+        filter: brightness(100%);
+
+        /* background-color: blue; */
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+      }
+
+      h1 {
+        line-height: 1.05;
+        font-size: 52px;
+        margin-bottom: 32px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 48px;
+      }
+
+      .btn:link,
+      .btn:visited {
+        font-size: 20px;
+        font-weight: 600;
+        background-color: #e67e22;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 9px;
+      }
+
+      .btn:focus {
+      }
+      .btn:hover {
+      }
+      .btn:active {
+      }
+
+      h2 {
+        font-size: 44px;
+        margin-bottom: 48px;
+      }
+
+      section {
+        background-color: #f7f7f7;
+        padding: 96px 0;
       }
     </style>
   </head>
   <body>
-    <nav>
-      <a href="./accordion/accordion.html">Accordion</a>
-      <a href="./carousel/carousel.html">Carousel</a>
-      <a href="./table/table.html">Table</a>
-      <a href="./pagination/pagination.html">Pagination</a>
-    </nav>
+    <header class="centered">
+      <div class="nav-container centered">
+        <div class="logo">♨(⋆‿⋆)♨</div>
+        <nav>
+          <a href="./accordion/accordion.html">Accordion</a>
+          <a href="./carousel/carousel.html">Carousel</a>
+          <a href="./table/table.html">Table</a>
+          <a href="./pagination/pagination.html">Pagination</a>
+          <a href="./email/email.html">Email</a>
+        </nav>
+      </div>
+      <div class="hero-section-main centered">
+        <div class="text-container">
+          <h1>A healthy meal delivered to your door every single day</h1>
+          <p>
+            Incidunt, in quaerat eum voluptas facilis maiores culpa adipisci
+            sunt a consequuntur delectus.
+          </p>
+          <a href="#" class="btn">Start eating well</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="centered">
+        <h2>Some random heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+          maxime nisi unde veritatis delectus earum. Modi eveniet nemo maiores
+          optio, voluptatum fugiat, dolore iusto saepe unde ipsam vel tempore
+          provident!
+        </p>
+      </div>
+    </section>
   </body>
 </html>

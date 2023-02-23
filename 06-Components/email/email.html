@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /*
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+      }
+
+      nav,
+      section,
+      main,
+      aside {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+
+      nav a:link,
+      nav a:visited {
+        color: #fff;
+      }
+      nav {
+        color: #fff;
+        background-color: #343a40;
+        grid-row: 2/-1;
+      }
+      menu {
+        background-color: #7048e8;
+        grid-column: 1/-1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+      menu button:last-child {
+        /* display: inline-block; */
+        margin-left: auto;
+        background-color: #d6336c;
+      }
+      menu button {
+        display: inline-block;
+        font-size: 16px;
+        background-color: #5f3dc4;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 8px 12px;
+      }
+      section {
+        padding: 40px;
+        background-color: #e9ecef;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+
+        overflow: scroll;
+      }
+      .email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #868e96;
+        flex: 1 0 96px;
+
+        width: 300px;
+        height: 96px;
+      }
+      aside {
+        background-color: #e9ecef;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="./../components-home.html">Home</a>
+    </nav>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark as unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <p>Inbox</p>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+  </body>
+</html>
