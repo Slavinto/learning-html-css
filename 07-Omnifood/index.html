@@ -4,30 +4,151 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Omnifood</title>
   </head>
   <body>
-    <section class="section-hero">
-      <div class="hero-container">
-        <div class="hero-text-box">
-          <h1>A healthy meal delivered to your door, every single day</h1>
-          <p class="hero-description">
-            The smart 365-days-per-year food subscription that will make you eat
-            healthy again. Tailored to your personal tastes and nutritional
-            needs. We have delivered 250,000+ meals last year!
-          </p>
-          <a class="btn" href="#">Start eating well</a>
-          <a class="btn" href="#">Learn more ⮩</a>
+    <header class="header">
+      <img src="./img/omnifood-logo.png" alt="omifood logo" class="logo" />
+
+      <nav class="navigation-top">
+        <ul class="main-nav-list">
+          <li><a href="#" class="main-nav-link">How it works</a></li>
+          <li><a href="#" class="main-nav-link">Our Meals</a></li>
+          <li><a href="#" class="main-nav-link">Prices</a></li>
+          <li><a href="#" class="main-nav-link nav-cta">Try for Free</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section-hero">
+        <div class="hero-container">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              A healthy meal delivered to your door, every single day
+            </h1>
+            <p class="hero-description">
+              The smart 365-days-per-year food subscription that will make you
+              eat healthy again. Tailored to your personal tastes and
+              nutritional needs.
+            </p>
+            <a class="btn btn-full margin-right-small" href="#"
+              >Start eating well</a
+            >
+            <a class="btn btn-outline" href="#">Learn more ⮫</a>
+
+            <div class="delivered-meals">
+              <div class="customers-images">
+                <img
+                  src="./img/customers/customer-1.jpg"
+                  alt="happy customer face"
+                />
+                <img
+                  src="./img/customers/customer-2.jpg"
+                  alt="happy customer face"
+                />
+                <img
+                  src="./img/customers/customer-3.jpg"
+                  alt="happy customer face"
+                />
+                <img
+                  src="./img/customers/customer-4.jpg"
+                  alt="happy customer face"
+                />
+                <img
+                  src="./img/customers/customer-5.jpg"
+                  alt="happy customer face"
+                />
+                <img
+                  src="./img/customers/customer-6.jpg"
+                  alt="happy customer face"
+                />
+              </div>
+              <p class="delivered-text">
+                <span>250,000+</span> meals delivered last year!
+              </p>
+            </div>
+          </div>
+          <div class="hero-image-box">
+            <img
+              class="hero-image"
+              src="./img/hero.png"
+              alt="woman enjoying food, meals in storage container, and food bowls on a table"
+            />
+          </div>
         </div>
-        <div class="hero-image-box">
-          <img
-            class="hero-image"
-            src="./img/hero.png"
-            alt="woman enjoying food, meals in storage container, and food bowls on a table"
-          />
+      </section>
+      <section class="section-how">
+        <div class="container">
+          <span class="subheading"> How it works </span>
+          <h2 class="heading-secondary">
+            Your daily dose of health in 3 simple steps
+          </h2>
         </div>
-      </div>
-    </section>
+
+        <div class="container grid grid-2-cols">
+          <div class="step-text-box">
+            <!-- step 1 -->
+            <p class="step-number">01</p>
+            <h3 class="heading-tertiary">Tell us what you like</h3>
+            <p class="step-description">
+              Never again waste time thinking about what to eat! Omnifood AI
+              will create a 100% personalized weekly meal plan just for you. It
+              makes sure you get all the nutrients and vitamins you need, no
+              matter what diet you follow!
+            </p>
+          </div>
+          <div class="step-img-box">
+            <img
+              class="step-image"
+              src="./img/app/app-screen-1.png"
+              alt="food selector interface screen of omnifood mobile app"
+            />
+          </div>
+          <!-- step 2 -->
+          <div class="step-img-box">
+            <img
+              class="step-image"
+              src="./img/app/app-screen-2.png"
+              alt="meal plan selector interface screen of omnifood mobile app japanese gyozas"
+            />
+          </div>
+          <div class="step-text-box">
+            <p class="step-number">02</p>
+            <h3 class="heading-tertiary">Tell us what you like</h3>
+            <p class="step-description">
+              Never again waste time thinking about what to eat! Omnifood AI
+              will create a 100% personalized weekly meal plan just for you. It
+              makes sure you get all the nutrients and vitamins you need, no
+              matter what diet you follow!
+            </p>
+          </div>
+          <!-- step 3 -->
+          <div class="step-text-box">
+            <p class="step-number">03</p>
+            <h3 class="heading-tertiary">Tell us what you like</h3>
+            <p class="step-description">
+              Never again waste time thinking about what to eat! Omnifood AI
+              will create a 100% personalized weekly meal plan just for you. It
+              makes sure you get all the nutrients and vitamins you need, no
+              matter what diet you follow!
+            </p>
+          </div>
+          <div class="step-img-box">
+            <img
+              class="step-image"
+              src="./img/app/app-screen-3.png"
+              alt="delivery selector interface screen of omnifood mobile app"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
