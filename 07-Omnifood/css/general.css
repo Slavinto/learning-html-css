@@ -29,6 +29,8 @@
     Greys: #555, #333 (primary heading),
     
     - Shadows
+    default: 0.9rem
+    small: 1.1rem,
 
     - Border radius
 
@@ -130,7 +132,7 @@ body {
   font-size: 2.4rem;
   padding: 1.6rem 3.2rem;
 
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-full:link,
@@ -154,4 +156,33 @@ body {
 .btn-outline:hover,
 .btn-outline:active {
   background-color: #fdf2e9;
+}
+
+.link:link,
+.link:visited {
+  color: #e67e22;
+  text-decoration: none;
+  display: inline-block;
+
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
 }
