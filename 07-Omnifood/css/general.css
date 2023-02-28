@@ -14,7 +14,7 @@
     
     Parapraph default: 1.6
     
-  Letter spacing: 0.75px
+    Letter spacing: 0.75px
 
     - Colors
 
@@ -26,11 +26,17 @@
 
     Accents:
 
-    Greys: #555, #333 (primary heading),
+    Greys: #555, #333 (primary heading), #6f6f6f (lightest grey for #fdf2e9) 
+    
+    Gradients: linear-gradient(135deg, #eb984e, #e67e22)
+    
     
     - Shadows
     default: 0.9rem
     small: 1.1rem,
+
+    0 2.4rem 4.8rem rgba(0, 0, 0, 0.08);
+
 
     - Border radius
 
@@ -71,6 +77,10 @@ body {
   display: grid;
   row-gap: 9.6rem;
   column-gap: 4.8rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid-items-aligned {
@@ -173,6 +183,35 @@ body {
 .link:active {
   color: #cf711f;
   border-bottom: 1px solid transparent;
+}
+
+/* .ingredients,
+.diets  */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* .diet */
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+}
+
+/* .diet ion-icon */
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+  transition: all 0.3s;
+}
+
+.list-icon:hover ion-icon {
+  color: #51cf66;
 }
 
 .margin-bottom-md {
