@@ -22,11 +22,11 @@
 
     Tints: #fdf2e9, #fae5d3, #e98b38 
 
-    Shades: #cf711f, #b8651b
+    Shades: #cf711f, #b8651b, #45260a
 
     Accents:
 
-    Greys: #555, #333 (primary heading), #6f6f6f (lightest grey for #fdf2e9) 
+    Greys: #555, #333 (primary heading), #6f6f6f (lightest grey for #fdf2e9), #767676 (lightest grey allowed on white) 
     
     Gradients: linear-gradient(135deg, #eb984e, #e67e22)
     
@@ -51,6 +51,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.5);
 }
 
 html {
@@ -96,6 +101,9 @@ body {
 .grid-4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
 
 .heading-primary,
 .heading-secondary {
@@ -132,6 +140,7 @@ body {
   margin-bottom: 3.2rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -143,6 +152,23 @@ body {
   padding: 1.6rem 3.2rem;
 
   transition: all 0.3s;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  font-size: 1.8rem;
+  padding: 0.9rem;
+}
+
+.btn-form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .btn-full:link,
@@ -210,7 +236,7 @@ body {
   transition: all 0.3s;
 }
 
-.list-icon:hover ion-icon {
+.list-item:hover .list-icon {
   color: #51cf66;
 }
 

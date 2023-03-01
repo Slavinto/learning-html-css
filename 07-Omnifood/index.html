@@ -17,7 +17,9 @@
   <body>
     <!-- Logo and navigation section -->
     <header class="header">
-      <img src="./img/omnifood-logo.png" alt="omifood logo" class="logo" />
+      <a href="#" class="logo-link">
+        <img src="./img/omnifood-logo.png" alt="omifood logo" class="logo" />
+      </a>
 
       <nav class="navigation-top">
         <ul class="main-nav-list">
@@ -542,7 +544,7 @@
                   />
                 </div>
                 <div class="">
-                  <label for=""></label>
+                  <label for="selector-where">How did you find us</label>
                   <select required name="selector-where" id="selector-where">
                     <option value="">Please choose option</option>
                     <option value="friends">Friends and family</option>
@@ -552,7 +554,7 @@
                   </select>
                 </div>
 
-                <button class="btn">Sign up now</button>
+                <button class="btn btn-form">Sign up now</button>
               </form>
             </div>
             <div
@@ -564,6 +566,86 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container grid grid-5-cols">
+        <div class="logo-col">
+          <a href="#" class="logo-link footer">
+            <img
+              src="./img/omnifood-logo.png"
+              alt="omifood logo"
+              class="logo"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a class="nav-link-social" href="#"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="nav-link-social" href="#"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="nav-link-social" href="#"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; 2023 by Omnifood Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="contact-address">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <p>
+              <a class="contact-phone" href="tel:415-201-6370"> 415-201-6370</a>
+              <br />
+              <a href="mailto:hello@omnifood.com" class="contact-email"
+                >hello@omnifood.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <div class="nav-col">
+            <p class="footer-heading">Account</p>
+            <ul class="footer-nav">
+              <li class="nav-link"><a href="#">Create an account</a></li>
+              <li class="nav-link"><a href="#">Sign in</a></li>
+              <li class="nav-link"><a href="#">iOS app</a></li>
+              <li class="nav-link"><a href="#">Android app</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="nav-col">
+          <div class="nav-col">
+            <p class="footer-heading">Company</p>
+            <ul class="footer-nav">
+              <li class="nav-link"><a href="#">About Omnifood</a></li>
+              <li class="nav-link"><a href="#">For Business</a></li>
+              <li class="nav-link"><a href="#">Cooking partners</a></li>
+              <li class="nav-link"><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="nav-col">
+          <div class="nav-col">
+            <p class="footer-heading">Resources</p>
+            <ul class="footer-nav">
+              <li class="nav-link"><a href="#">Recipe directory</a></li>
+              <li class="nav-link"><a href="#">Help center</a></li>
+              <li class="nav-link"><a href="#">Privacy and terms</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
