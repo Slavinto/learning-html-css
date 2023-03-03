@@ -8,7 +8,7 @@ instead 1rem=1em = 16px; */
 @media (max-width: 84em) {
   .section-hero,
   .header {
-    max-width: 120rem;
+    max-width: 134.4rem;
   }
   .heading-primary {
     font-size: 4.4rem;
@@ -16,6 +16,19 @@ instead 1rem=1em = 16px; */
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-text {
+    font-size: 1.6rem;
+  }
+
+  .testimonials-container,
+  .gallery {
+    align-self: start;
+  }
+
+  .customers-images {
+    flex: 1 0 auto;
   }
 }
 
@@ -26,6 +39,118 @@ instead 1rem=1em = 16px; */
   html {
     /* 9px/16px=0.5625 */
     font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero-container {
+    gap: 4.8rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .subheading {
+    font-size: 1.8rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-text,
+  .testimonial-customer-name {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-customer-name {
+    /* font-size: 1.4rem; */
+  }
+
+  .testimonials-container,
+  .gallery {
+    padding: 9.6rem 4.8rem;
+    align-self: start;
+  }
+
+  .btn:link,
+  .btn:visited {
+    font-size: 2rem;
+  }
+
+  .customers-images {
+    flex: 1 0 auto;
+  }
+}
+
+/*===========================================*/
+/* Below 944px (tablets) */
+/*===========================================*/
+
+@media (max-width: 59em) {
+  html {
+    /* 8 / 16 = 0.5 = 50%*/
+
+    font-size: 50%;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-image {
+    width: 60%;
+  }
+
+  .hero-text-box,
+  .hero-image-box {
+    text-align: center;
+  }
+
+  .hero-container {
+    /* padding: 0 9.6rem; */
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .delivered-text {
+    font-size: 2rem;
+  }
+  .customers-images {
+    flex: 0 1 auto;
+  }
+
+  .section-featured-in .container {
+    justify-content: center;
+    gap: 6.4rem;
+  }
+
+  .featured-in-heading {
+    margin-bottom: 1.8rem;
+  }
+
+  .section-how {
+    padding: 8rem 0;
   }
 }
 
