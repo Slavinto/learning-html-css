@@ -1,0 +1,11 @@
+.greeting {
+    display: flex;
+    background-color: bisque;
+}
+
+@media (max-width: 47em) {
+    .greeting {
+        display: flex;
+        flex-direction: column;
+    }
+}

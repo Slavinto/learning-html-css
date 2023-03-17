@@ -1,0 +1,28 @@
+.block {
+    border: 5px solid red;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 1800px;
+    position: relative;
+}
+
+.block .element {
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.block__1 {
+    background-color: aqua;
+}
+.block__2 {
+    background-color: orchid;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.block__3 {
+    z-index: 2;
+    background-color: blue;
+}
